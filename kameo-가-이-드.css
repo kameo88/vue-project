@@ -33,3 +33,19 @@ vuetify 의 v-calendar 대신 사용
     L stores ??
     L app.vue
     L main.js
+    L vite-env.d.ts
+
+
+##  확인 필요
+
+vite & vue ? typescript & vue
+
+app.vue
+main.ts
+vite-env.d.ts
+
+package.json 확인 필요
+
+tsconfig.json
+tsconfig.node.json
+vite.config.ts
