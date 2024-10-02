@@ -10,7 +10,12 @@
     >
         <div class="inner">
             <div class="left">좌측 menu</div>
-            <div class="left">좌측 menu</div>
+            <!-- header 설정 값에 따라 -->
+            <h2 class="title center"
+                v-if="layout.header === `detail` || layout.header === `detailEvent` "
+            >
+                {{ layout.navTitle }}
+            </h2>
             <div class="right">
                 우측 menu
                 <button type="button" class="icon icon_bookmark"
