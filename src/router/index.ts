@@ -3,7 +3,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import guide from './guide.ts'
-import path from 'path';
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),

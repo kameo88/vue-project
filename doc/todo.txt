@@ -1,0 +1,62 @@
+* 추가 npm install
+  dependencies
+	- core-js
+	- vuetify
+	- @mdi/font
+
+  devDependencies
+	- unplugin-auto-import
+	- unplugin-fonts
+	- unplugin-vue-components
+	- unplugin-vue-router
+	- vite-plugin-vue-layouts
+	- vite-plugin-vuetify
+	- vue-router
+
+	- pinia
+	- axios
+
+
+1. [완료] 두 프로젝트 생성
+	A) npm create vite@latest
+	B) npm create vuetify@latest (JS)
+    C) npm create vuetify!latest (TS)
+
+2. [완료] A)에 vuetify 추가 후 실행 확인
+	- https://vuetifyjs.com/en/getting-started/installation/#existing-projects 참조
+	- v-btn 버튼 추가 실행 확인
+
+3. [완료] B)에 pages/components.vue 추가 및 실행 확인
+	- vite.config.js에 VueRouter에 routesFolder, extensions, filePatterns, exclude 속성 추가
+
+4. [완료] B)의 아래 방식을 A)에 이식
+	- unplugin-vue-router
+	- @vitejs/plugin-vue 방식 적용하여 2.의 vuetify 적용 방식 변경
+
+5. [완료] layouts에 파일 추가해서 2개 이상의 layout 사용하는 방법
+    - /src/layouts/default.vue는 모든 pages에 적용됨
+    - page별로 layout을 적용하려면 default.vue를 제거할 것
+
+6. [완료] Vuetify 주요 component의 size별 높이 정리
+	- v-btn
+
+7. v-stepper 스타일
+    - dot
+    - [부분완료] block
+
+8. B), c) 비교
+    - 환경설정 부분 (ex. vite.config.*)
+	- /src/views/*.vue 내의 script
+	- type 정의
+
+9. [완료] v-bottom-sheet 화면 하단에 부분 노출(.lowBottomSheet), event 시에 전체 노출(.fullBottomSheet)
+	- .lowBottomSheet
+		-- 높이는 어느 정도로 할지?
+		-- dimmed(.v-overlay__scrim) 숨김(delay 후에 .d-none 추가)
+	- .fullBottomSheet의
+		-- dimmed(.v-overlay__scrim) 노출
+
+10. 로그인 폼
+    - footer 버튼
+
+11. Form Control
