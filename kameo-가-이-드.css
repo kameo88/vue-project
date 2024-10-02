@@ -12,3 +12,24 @@ vuetify 의 v-calendar 대신 사용
 
 > maska@2.1.11 / mit / http://beholdr.github.io/maska/ / v-text-field 에 masked 입력 제공용
 
+
+##  기본 구조
+> src
+    L assets
+    L components
+    L stores ??
+    L app.vue
+    L main.js
+
+
+##  구조
+> src
+    L assets
+    L components
+    L layouts
+    L plugins
+    L router
+    L view
+    L stores ??
+    L app.vue
+    L main.js
