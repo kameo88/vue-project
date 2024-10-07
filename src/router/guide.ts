@@ -1,3 +1,3 @@
 export default [
-    { path: '/kameo', component: () => import('@/view/kameo/index.vue') },
+    { path: '/kameo', component: () => import('@/views/kameo/index.vue') },
 ]
