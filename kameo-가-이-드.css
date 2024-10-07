@@ -1,6 +1,29 @@
-####	new project
+////////////////////////////////////
 
-# npm packages #
+- npm install vue-router@4
+
+
+////////////////////////////////////
+####    기존 project    ####
+
+1. 프로젝트 생성 
+    * npm create vite@lastest
+        - vue + typescript
+    * package 추가
+        - vuetify, @mdi/font, pretendard
+        - chart.js
+        - vue-chartjs
+        - chartjs-plugin-datalabels
+        - /package/circlepacker @2.1.0
+
+    * dev package 추가
+        - vite-plugin-vuetify, vue-router
+    * vite.config.mts 수정 (?)
+        - define, resolve, server, build 추가
+
+
+#############################################
+## 퍼블에서 추가한 npm packages #
 > v-calendar@2.4.2 / MIT / https://vcalendar.io
 vuetify 의 v-calendar 대신 사용
 
