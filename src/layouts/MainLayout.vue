@@ -10,7 +10,7 @@
 // import
 import {ref, onMounted, onBeforeUnmount} from "vue";
 
-import MainHeader from "@/layout/MainHeader.vue"
+import MainHeader from "@/layouts/MainHeader.vue"
 
 // variable
 const layout = ref({ header: `main`, title: ``});

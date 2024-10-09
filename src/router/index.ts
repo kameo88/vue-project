@@ -17,7 +17,7 @@ const router = createRouter({
             path: `/my/`,
             component: () => import(`@/layouts/MainLayout.vue`),
             children:[
-                { path: `mypage`, name: `mypage`, component: () => import(`@/view/my/mypage.vue`)}
+                { path: `mypage`, name: `mypage`, component: () => import(`@/views/my/mypage.vue`)}
             ]
         }
     ]
