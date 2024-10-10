@@ -9,8 +9,8 @@ const router = createRouter({
     routes: [
         ... guide,
         // 
-        { path: `/`, redirect: `/guide` },
-        // {path: `/kameo`, redirect: `/kameo/index.vue`}
+        // { path: `/`, redirect: `/guide` },
+        { path: `/`, redirect: `/kameo`},
 
         // 마이페이지
         {
