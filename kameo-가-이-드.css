@@ -2,6 +2,19 @@
 
 - npm install vue-router@4
 
+////////////////////////////////////
+
+>> extensions
+auto close tag
+auto rename tag
+esLint
+HTML CSS Support
+Prettier -code for
+rainbow brackets
+Vetur
+Vue- official
+vue 3 Snippets
+vue 3 Support - all in one
 
 ////////////////////////////////////
 ####    기존 project    ####
@@ -74,3 +87,10 @@ package.json 확인 필요
 tsconfig.json
 tsconfig.node.json
 vite.config.ts
+
+
+####    명령어
+npm install
+npm run dev
+npm run preview
+npm run build
