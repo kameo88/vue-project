@@ -94,3 +94,8 @@ npm install
 npm run dev
 npm run preview
 npm run build
+
+#### iOS swift
+- swift ui 상태바 viewcontroller 확장
+- snapkit framework
+	; webview의 contrains를 safearea ignore로 처리

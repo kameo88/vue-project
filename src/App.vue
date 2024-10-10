@@ -3,6 +3,4 @@
 
 <template>
       <router-view />
-    <!-- <app>
-    </app> -->
 </template>
