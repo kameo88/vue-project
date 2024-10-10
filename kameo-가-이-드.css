@@ -95,7 +95,42 @@ npm run dev
 npm run preview
 npm run build
 
+npm cache clean --force
+
 #### iOS swift
 - swift ui 상태바 viewcontroller 확장
 - snapkit framework
-	; webview의 contrains를 safearea ignore로 처리
+	webview의 contrains를 safearea ignore로 처리
+
+####    plugin
+- morph
+
+####    css
+- autofill 관련 정리 필요 (아래 링크 참조)
+https://yehaday.tistory.com/entry/CSS-autofill-input-%EC%9E%90%EB%8F%99%EC%99%84%EC%84%B1-%EC%8A%A4%ED%83%80%EC%9D%BC-%EC%A0%9C%EC%96%B4%ED%95%98%EA%B8%B0
+
+// 위 링크 내용
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+  border: 5px solid #f00;
+  -webkit-text-fill-color: #000;
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+// 작업 내용
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-transition: background-color 9999s ease-out;
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  -webkit-text-fill-color: #000 !important;
+}
+
+####    vuetify
+- v-select animation 해제
+transition: none
+- hide-details
