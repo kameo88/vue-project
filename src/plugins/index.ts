@@ -6,10 +6,10 @@
 
 
 // plugins
-import { router } from '@/router'
-// import { pinia } from '@/store'
-// import { vuetify } from './vuetify.ts'
-// import { Vue3lottie } from 'vue3-lottie'
+import  router from '@/router'
+// import pinia from '@/store'
+// import vuetify from './vuetify.ts'
+// import Vue3lottie from 'vue3-lottie'
 
 // Types
 import type { App } from 'vue'

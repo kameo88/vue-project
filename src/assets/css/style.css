@@ -1,0 +1,103 @@
+:root {
+    --base-font: "Pretendard Variable", Pretendard, --apple-system, system-ui ;
+    --base-input-bg-color: #333;
+
+    /* safe area 노치화면 대응 */
+    --sat: constant(safe-area-inset-top);
+    --sat: env(safe-area-inset-top);
+    --sab: constant(safe-area-inset-bottom);
+    --sab: env(safe-area-inset-bottom);
+}
+
+*, *::before, *::after {
+    /* padding:0; margin:0;  */
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    -webkit-tap-highlight-color:transparent;
+}
+/* :focus:not(:focus-visible) {outline:none;} */
+
+html {
+    font-size:10px;
+    font-family: var(--base-font);
+    overscroll-behavior-y: none;
+}
+body {
+    /* font-family: "Pretendard JP", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; */
+    min-height: 100vh;
+    margin: 0;
+    font-size:1.4rem; 
+    font-weight:500; 
+    color:#000; 
+    line-height:2rem; 
+    /* word-break:break-word; */
+    /* -webkit-text-size-adjust: 100%; */
+    touch-action:pan-x pan-y;
+}
+
+#app {
+    width: 100vw;
+}
+/* layout */
+.wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 100vh;
+    /* background-color: var(--bg_01);
+    color: var(--fc_b); */
+}
+
+.header_wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    height: calc(var(--sat) + 6rem);
+    padding: var(--sat) 2rem 0;
+    border-bottom: 1px solid gray;
+    overflow: hidden;
+    z-index: 99;
+}
+.header_wrap .inner {
+    position: relative; 
+    display: flex; 
+    flex: 1; 
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    z-index: 10;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    /* content 상하 여백 */
+    padding: calc(var(--sat) + 8rem ) 0  calc(var(--sab) + 2rem );
+}
+.section {
+    width: 100vw;
+    padding: 0 2rem;
+}
+.section_f {
+    width: 100vw;
+}
+.section + .section,
+.section + .section_f,
+.section_f + .section,
+.section_f + .section_f {
+    margin-top: 2rem;
+}
+
+.progress_page {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background-color: #ff6600;
+    transition: all .1s ease ;
+    z-index: 1000;
+}

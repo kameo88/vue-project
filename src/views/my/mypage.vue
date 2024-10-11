@@ -17,7 +17,8 @@ onMounted(function () {
 </script>
 
 <template>
-    <main class="content mypage">
-        mypage contents
+    <main class="content mypage" style="height: 1200px;">
+        <section class="section">contents 1</section>
+        <section class="section_f">contents full 2</section>
     </main>
 </template>
