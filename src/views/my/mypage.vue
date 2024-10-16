@@ -33,9 +33,18 @@ onMounted(function () {
         <section class="section">contents 1</section>
         <section class="section_f">contents full 2</section>
         <CntsImgVideo
-        :kameo="{
-            controlsUI: `custom`,
-            size: `portrait`
-        }" />
+            :option="{
+                type: 'video',
+                controlsUI: `custom`,
+                size: `portrait`
+            }" 
+        />
+        <!-- 가로형 -->
+        <CntsImgVideo
+            :option="{
+                type: `video`,
+                size: `landscape`
+            }"
+            />
     </main>
 </template>

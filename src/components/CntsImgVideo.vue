@@ -9,7 +9,9 @@ import { ref } from "vue";
  **********************/
 const article = ref({
   title: `동영상 관련 컴포넌트`,
-  video: `/src/assets/images/movie.mp4`,
+  video1: `/src/assets/images/movie.mp4`,
+  video2: `/src/assets/images/movie.mp4`,
+  thumImg: `/src/assets/images/common/bg.png`,
 });
 
 // popup
@@ -36,7 +38,7 @@ const IsActive = ref(false);
 const IsScreenIcon = ref(true);
 
 const Props = defineProps ({
-  kameo: Object,
+  option: Object,
   // showNativeControls: false, 
   // native controls 사용여부
 });
@@ -114,30 +116,46 @@ const toggleFullscreen = () => {
     <div 
       class="cnts_img_wrap"
       :class="[ 
-        { landscape: kameo.size === `landscape` },
-        { portrait: kameo.size === `portrait` },
+        { landscape: option.size === `landscape` },
+        { portrait: option.size === `portrait` },
       ]"
     >
         <div class="cnts_img_area video"
           :class="{ fixed : IsActive }"
           @touchstart="ShowControls"
+          v-if="option.type === `video`"
         >
+          <div class="video_thum"
+          :style="{ backgroundImage: 'url(' + article.thumImg +  ')' }"
+          >
+          </div>
+            <!-- 고유 속성 값을 바인딩 -->
             <!-- :controls ="option.controlsUI === `native`" -->
-            <!-- v-if="option.size === `portrait`" -->
           <video
             class="video_palyer" 
             playsinline
             ref="video"
-            :src="article.video"
+            :src="article.video1"
             @loadedmetadata="SetMaxProgress"
             @timeupdate="UpdateProgress"
+            v-if="option.size === `landscape`"
             />
+            <!-- :controls ="option.controlsUI === `native`" -->
+          <video
+            class="video_palyer" 
+            playsinline
+            ref="video"
+            :src="article.video2"
+            @loadedmetadata="SetMaxProgress"
+            @timeupdate="UpdateProgress"
+            v-if="option.size === `portrait`"
+            />
+            <!-- v-if="opiton.controlsUI === `custom`" -->
           <div 
             class="video_controls"
             :class="{ animation : animationClassVisible }"
             v-show="videoControlsVisible"
             >
-            <!-- v-if="opiton.controlsUI === `custom`" -->
             <div class="btn_area">
               <button type="button" class="icon icon_prev">
                 <span class="blind">10초 앞으로</span>
