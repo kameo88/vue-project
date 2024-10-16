@@ -39,6 +39,41 @@ body {
 #app {
     width: 100vw;
 }
+/* 공통 */
+.blind {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 1px;
+    color: transparent;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+button, input, select {
+    background-color: transparent;
+    border-style: none;
+}
+button.icon {
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 24px auto;
+}
+.icon_settings {
+    background-image: url(../images/common/icon_setting.png);
+}
+.icon_prev {
+    background-image: url(../images/common/icon_play_prev.png);
+}
+.icon_next {
+    background-image: url(../images/common/icon_play_next.png);
+}
+video {
+    width: -webkit-fill-available;
+    /* object-fit: cover; */
+}
 /* layout */
 .wrap {
     position: relative;
@@ -101,3 +136,165 @@ body {
     transition: all .1s ease ;
     z-index: 1000;
 }
+.cnts_img_wrap {
+    position: relative;
+}
+.cnts_img_wrap .cnts_img_area.video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: initial;
+}
+.cnts_img_wrap .cnts_img_area video.video_player {
+    position: relative;
+    height: 100%;
+    z-index: 2;
+
+}
+.cnts_img_wrap .cnts_img_area .video_controls {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 11;
+}
+.cnts_img_wrap .cnts_img_area .video_controls.animation {
+    animation: controlsFadein 2s;
+}
+@keyframes controlsFadein {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+/* 동영상 size */
+.cnts_img_wrap.portrait .cnts_img_area.video {
+    height: 500px;
+}
+.cnts_img_wrap.portrait .cnts_img_area video {
+    height: 100%;
+}
+.cnts_img_wrap .btn_area {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: fit-content;
+    height: 52px;
+    margin: auto;
+}
+.cnts_img_area .btn_area .icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 5rem;
+}
+.cnts_img_area.video .icon_play {
+    background:rgba(255, 255, 255, 1) url(../images/common/icon_video_play.png) no-repeat center / 3rem auto;
+}
+.cnts_img_area.video .icon_pause {
+    background:rgba(255, 255, 255, 1) url(../images/common/icon_video_pause.png) no-repeat center / 3rem auto;
+}
+.cnts_img_area.video .icon_reload {
+    background:rgba(255, 255, 255, 1) url(../images/common/icon_video_reload.png) no-repeat center / 3rem auto;
+}
+.cnts_img_area.video .icon_close {
+    background-image: url(../images/common/icon_close_w.png);
+}
+.cnts_img_area.video .icon_video_full {
+    background-image: url(../images/common/icon_full_screen.png);
+}
+.cnts_img_area.video .icon_video_small {
+    background-image: url(../images/common/icon_default_screen.png);
+}
+/* 동영상 설정 */
+.cnts_img_area .video_controls .settings {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+}
+.cnts_img_area .video_controls .info {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20px;
+}
+.cnts_img_area .video_controls .time {
+    font-size: 12px;
+}
+.cnts_img_area .video_controls .current:after {
+    content: '/';
+    display: inline-flex;
+    padding: 0 5px;
+}
+.cnts_img_area .video_controls .total {
+    color: rgba(255, 255, 255, .5);
+}
+.cnts_img_area .video_controls .progress {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    display: flex;
+    padding: 0 20px;
+}
+.video_controls .progress_video {
+    position: absolute;
+    bottom: 10px;
+    width: calc(100% - 40px);
+    height: 3px;
+    margin-left: 20px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, .2);
+    cursor: pointer;
+}
+.video_controls .progress_filled {
+    position: absolute;
+    height: 100%;
+    background: #ff6600;
+    transition: width 1s ease;
+}
+.video_controls .progress_filled:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 9px;
+    height: 9px;
+    margin: auto;
+    border-radius: 50%;
+    background-color: #ff6600;
+}
+
+/* 세로 동영상 full version */
+.cnts_img_wrap .cnts_img_area.video.fixed {
+    position: fixed;
+    top: var(--sat);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    background-color: #000;
+    z-index: 100;
+}
+.cnts_img_wrap.portrait .cnts_img_area.video.fixed .btn_area {
+    top: initial;
+    bottom: 4rem;
+}
+.cnts_img_wrap.portrait .cnts_img_area.video.fixed .progress_video {
+    bottom: 11.2rem;
+}
+.cnts_img_wrap.portrait .cnts_img_area.video.fixed .info {
+    bottom: 11.9rem;
+}
+
+
+

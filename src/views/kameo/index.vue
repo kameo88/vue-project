@@ -4,5 +4,6 @@
 
 <template>
   <div>kameo test</div>
-  <router-link to="/my/mypage">mypage</router-link>
+  <br /><br />
+  <router-link to="/my/mypage">mypage link</router-link>
 </template>

@@ -1,16 +1,28 @@
 
 <script setup>
-// [import]
+/**********************
+ * [Import]
+ **********************/
 import { onMounted, ref } from "vue";
 
-//[variable]
+import CntsImgVideo from '@/components/CntsImgVideo.vue';
+
+/**********************
+ * [Variable] 
+ **********************/
 const layout = ref({
     header: "subCntsArticle",
     navTitle: "중간 타이틀"
 });
 const Emits = defineEmits(["setLayout"]);
 
-// event
+/**********************
+ * [Function] 
+ **********************/
+
+ /**********************
+ * [Event] 
+ **********************/
 onMounted(function () {
     Emits("setLayout", layout.value);
 });
@@ -20,5 +32,10 @@ onMounted(function () {
     <main class="content mypage" style="height: 1200px;">
         <section class="section">contents 1</section>
         <section class="section_f">contents full 2</section>
+        <CntsImgVideo
+        :kameo="{
+            controlsUI: `custom`,
+            size: `portrait`
+        }" />
     </main>
 </template>
