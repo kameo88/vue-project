@@ -1,3 +1,7 @@
+.mbti_inline {width: 100vw;}
+.box_padding {width:calc(25% - 10px); padding:5px;}
+.alphabet_box {width:100%; aspect-ratio:1/1;}
+
 ////////////////////////////////////
 
 - npm install vue-router@4
